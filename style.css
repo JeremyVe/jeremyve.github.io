@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-align: center; */
+  color: #2c3e50;
+  margin: 0;
+  perspective: 1000px;
+}
+
+#header {
+  @apply mx-8;
+  /* background: url('./src/jur-wiersema-HsJyNDedxyc-unsplash.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* text-shadow: 0 2px 3px rgba(0,0,0,0.5); */
+  /* color: white; */
+  height: 95vh;
+  margin: 2.5vh;
+  /* border-radius: 20px; */
+  font-weight: bold;
+  /* box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2);; */
+}
+
+.project-screenshot {
+  /* box-shadow: 0 1px 1px 1px rgb(212, 220, 226); */
+}
+
+#arrow-scroll-down {
+  animation: scroll-down 2s infinite;
+}
+
+@keyframes scroll-down {
+  0% {transform: translateY(-5px);}
+  20% {transform: translateY(2px);}
+  30% {transform: translateY(-4px);}
+  40% {transform: translateY(0px);}
+  60%, 100% {transform: translateY(-5px);}
+}
+
+
+.section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section > .small-col {
+  width: 350px;
+  flex-shrink: 0;
+}
+.section > .big-col {
+  width: 100%;
+}
+
+.project-content,
+.project-image {
+  width: 50%;
+  margin: 0 30px;
+}
+
+.project-image > img {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 900px) {
+  #onoka .section,
+  #aftership .section,
+  #viking-code-school .section,
+  #esona-project,
+  #chamois-project,
+  #laetitia-cefali-project {
+  @apply flex-wrap;
+  }
+
+  /* #onoka .section #onoka-grid-picture,
+  #viking-code-school .section .big-col {
+    @apply mb-8 max-w-lg;
+    order: -1;
+  } */
+
+  .project-image,
+  .project-content {
+    @apply w-full mx-auto justify-center items-center;
+  }
+
+  #onoka .section #onoka-grid-picture,
+  #aftership .section .big-col,
+  #viking-code-school .section .big-col,
+  #esona-project .project-content,
+  #chamois-project .project-content,
+  #laetitia-cefali-project .project-content {
+    @apply my-8 text-center max-w-lg;
+    order: -1;
+  }
+
+  #aftership .section .big-col > div,
+  #viking-code-school .section .big-col > div {
+    @apply items-center;
+  }
+}
