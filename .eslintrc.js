@@ -22,7 +22,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-multiple-empty-lines': 'off',
   },
-  ignorePatterns: ["node_modules/", "style.css"],
+  ignorePatterns: ["node_modules/", "style.css", "index.html"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

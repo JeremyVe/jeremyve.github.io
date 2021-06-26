@@ -102,3 +102,7 @@ body {
     @apply items-center;
   }
 }
+
+.invisible {
+  display: none;
+}
