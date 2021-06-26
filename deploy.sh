@@ -15,7 +15,8 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git remote add origin https://github.com/JeremyVe/jeremyve.github.io.git
+# First time : Add origin
+# git remote add origin https://github.com/JeremyVe/jeremyve.github.io.git
 
 # if you are deploying to https://<USERNAME>.github.io
 git push -f origin master
